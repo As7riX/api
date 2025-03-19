@@ -1,13 +1,18 @@
 package com.api;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.ArrayList;
+
+import java.util.List;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.Response;
 
 @Path("books")
 public class BookServices {
 	@GET
-	public List list() {
+	public List<Book> list() {
 		List books = new ArrayList();
 		Author author = new Author();
 		author.setId(1);

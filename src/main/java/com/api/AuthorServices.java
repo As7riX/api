@@ -1,5 +1,12 @@
 package com.api;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+
 @Path("books/{book_id}/authors")
 public class AuthorServices {
 	@GET
